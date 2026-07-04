@@ -1,0 +1,35 @@
+{
+    "name": "uaregistry/sdk",
+    "description": "Standalone PHP client for the UARegistry EPP service — RFC 5730-5734 over TLS (port 700). No framework, no project code.",
+    "type": "library",
+    "keywords": ["epp", "registry", "domains", "ua", "uaregistry", "rfc5730", "rfc5731", "client", "sdk"],
+    "homepage": "https://github.com/uaregistry/php-sdk",
+    "license": "MIT",
+    "authors": [
+        { "name": "UARegistry", "homepage": "https://github.com/uaregistry" }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-dom": "*",
+        "ext-libxml": "*",
+        "ext-openssl": "*",
+        "psr/log": "^1.1 || ^2.0 || ^3.0"
+    },
+    "suggest": {
+        "monolog/monolog": "Any PSR-3 logger (e.g. Monolog) can be passed to Client for redacted command/frame logging"
+    },
+    "support": {
+        "issues": "https://github.com/uaregistry/php-sdk/issues",
+        "source": "https://github.com/uaregistry/php-sdk"
+    },
+    "autoload": {
+        "psr-4": { "UARegistry\\Sdk\\": "src/" }
+    },
+    "scripts": {
+        "test": "@php tests/offline_test.php"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
